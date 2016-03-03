@@ -1,0 +1,16 @@
+<div class="container">
+  <br />
+  <div class="col-md-8 col-sm-offset-2">
+    <div class="well">
+      <h1>Let's Get Started</h1>
+      <%= simple_form_for @lead do |f| %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :phone %>
+        <%= f.input :email %>
+
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

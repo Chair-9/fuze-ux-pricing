@@ -1,0 +1,56 @@
+p {
+ font-family: sans-serif;
+}
+h1 {
+ top: 100px;
+ left: 0;
+ color: black;
+ font-family: sans-serif;
+ text-transform: uppercase;
+}
+.lineup {
+position: absolute;
+
+}
+.header {
+position: absolute;
+margin-top: -120px;
+
+}
+
+
+.dashboard {
+ display: block;
+ font-style: italic;
+ left: 0;
+ color: black;
+ background: black;
+ height: 75px;
+ width: 100%;
+ position: fixed;
+
+}
+
+h2 {
+ font-family: sans-serif;
+ color: black;
+
+}
+h3 {
+ font-family: sans-serif;
+ color: black;
+}
+p {
+ color: gray;
+}
+li {
+list-style: none;
+}
+.sign_in {
+padding: 10px;
+background-color: #007EA7;
+}
+.img-responsive {
+height: 60px;
+width: 70px;
+}
