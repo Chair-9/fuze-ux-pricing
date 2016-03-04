@@ -11,7 +11,7 @@ class LeadsController < ApplicationController
   def create
     @lead = Lead.new(lead_params)
     if @lead.save
-      redirect_to edit_lead_path(@lead), notice: 'On to Step 2!'
+      redirect_to edit_lead_path(@lead)
     else
       render :new
     end
