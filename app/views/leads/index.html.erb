@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>All Leads</h1>
+  <% @leads.each do |lead| %>
+    <div class="jumbotron">
+      <h3><%= link_to lead.full_name, lead_path(lead) %></h1>
+        <dl class="dl-horizontal">
+          <dt>Phone</dt>
+          <dd><%= lead.phone %></dd>
+          <dt>Email</dt>
+          <dd><%= lead.email %></dd>
+          <dt>Business Name</dt>
+          <dd><%= lead.business_name %></dd>
+        </dl>
+    </div>
+  <% end %>
+</div>

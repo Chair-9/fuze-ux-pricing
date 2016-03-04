@@ -1,5 +1,9 @@
 class LeadsController < ApplicationController
 
+  def index
+    @leads = Lead.all
+  end
+
   def new
     @lead = Lead.new
   end
@@ -34,7 +38,10 @@ class LeadsController < ApplicationController
   private
 
   def lead_params
-    params.require(:lead).permit(:first_name, :last_name, :phone, :email)
+    params.require(:lead).permit(:first_name, :last_name, :phone, :email,
+     :business_name, :state, :business_type, :payment_methods,
+     :annual_average_processing_volume, :average_sale_amount,
+     :last_month_processing_volume, :last_month_processing_fees, :chargebacks)
   end
 
 

@@ -1,0 +1,33 @@
+<div class="container">
+  <br />
+  <div class="jumbotron">
+    <h1><%= @lead.full_name %></h1>
+      <dl class="dl-horizontal">
+        <dt>Phone</dt>
+        <dd><%= @lead.phone %></dd>
+        <dt>Email</dt>
+        <dd><%= @lead.email %></dd>
+        <dt>Business Name</dt>
+        <dd><%= @lead.business_name %></dd>
+        <dt>State</dt>
+        <dd><%= @lead.state %></dd>
+        <dt>Business Type</dt>
+        <dd><%= @lead.business_type %></dd>
+        <dt>Payment Methods</dt>
+        <dd><%= @lead.payment_methods %></dd>
+        <dt>Annual Processing Volume</dt>
+        <dd><%= @lead.annual_average_processing_volume %></dd>
+        <dt>Average Sale Ammount</dt>
+        <dd><%= @lead.average_sale_amount %></dd>
+        <dt>Last Month's Processing Volume</dt>
+        <dd><%= @lead.last_month_processing_volume %></dd>
+        <dt>Lats Month's Processing Fees</dt>
+        <dd><%= @lead.last_month_processing_fees %></dd>
+        <dt>Chargebacks</dt>
+        <dd><%= @lead.chargebacks %></dd>
+
+      </dl>
+      <br />
+      <%= link_to "Edit Info", edit_lead_path, class: "btn btn-primary" %>
+  </div>
+</div>
