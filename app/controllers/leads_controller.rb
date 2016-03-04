@@ -34,7 +34,6 @@ class LeadsController < ApplicationController
     end
   end
 
-
   private
 
   def lead_params
@@ -43,9 +42,4 @@ class LeadsController < ApplicationController
      :annual_average_processing_volume, :average_sale_amount,
      :last_month_processing_volume, :last_month_processing_fees, :chargebacks)
   end
-
-
-
-
-
 end
