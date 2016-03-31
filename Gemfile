@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'rails_12factor', '~> 0.0.3'
 gem 'bootswatch-rails'
 gem "simple_form"
+gem 'wicked', '~> 1.2', '>= 1.2.1'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

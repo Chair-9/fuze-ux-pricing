@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160303224527) do
+ActiveRecord::Schema.define(version: 20160331033546) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,23 @@ ActiveRecord::Schema.define(version: 20160303224527) do
     t.string  "business_name"
     t.string  "state"
     t.string  "business_type"
+    t.string  "payment_methods"
+    t.decimal "annual_average_processing_volume"
+    t.decimal "average_sale_amount"
+    t.decimal "last_month_processing_volume"
+    t.decimal "last_month_processing_fees"
+    t.integer "chargebacks"
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "email"
+    t.string  "phone"
+    t.string  "business_name"
+    t.string  "state"
+    t.string  "bm_business_type"
+    t.string  "ecomm_business_type"
     t.string  "payment_methods"
     t.decimal "annual_average_processing_volume"
     t.decimal "average_sale_amount"
