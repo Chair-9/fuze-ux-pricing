@@ -1,7 +1,7 @@
 class Quotes::BuildController < ApplicationController
   include Wicked::Wizard
 
-  steps :add_processing_types, :add_finacial
+  steps :add_processing_types, :add_finacial, :thank_you
 
   def new
     redirect_to wizard_path(steps.first)

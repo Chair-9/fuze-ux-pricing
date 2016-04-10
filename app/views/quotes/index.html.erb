@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>All Leads</h1>
+  <% @quotes.each do |quote| %>
+    <div class="jumbotron">
+      <h3><%= link_to quote.full_name, quote_path(quote) %></h1>
+        <dl class="dl-horizontal">
+          <dt>Phone</dt>
+          <dd><%= quote.phone %></dd>
+          <dt>Email</dt>
+          <dd><%= quote.email %></dd>
+          <dt>Business Name</dt>
+          <dd><%= quote.business_name %></dd>
+        </dl>
+    </div>
+  <% end %>
+</div>

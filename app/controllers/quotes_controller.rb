@@ -1,4 +1,10 @@
 class QuotesController < ApplicationController
+
+
+  def index
+    @quotes = Quote.all
+  end
+
   def new
     @quote = Quote.new
   end
@@ -10,6 +16,10 @@ class QuotesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @quote = Quote.find(params[:id])
   end
 
   private

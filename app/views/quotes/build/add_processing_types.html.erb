@@ -6,12 +6,23 @@
       <%= simple_form_for @quote, url: wizard_path, method: :put do |f| %>
         <%= f.input :business_name %>
         <%= f.input :state %>
-
         <%= f.input :payment_methods %>
-        <%= f.input :bm_business_type %>
-        <%= f.input :ecomm_business_type %>
+        <%= f.input :bm_business_type, collection: ['Please Select', 'Food & Beverage', 'Retail', 'Beauty Professional',
+                                                    'Profesional Services', 'Home & Repair Services', 'Health & Fitness', 'Organizations',
+                                                    'Transportation', 'Leisure & Entertainment', 'Adult Novelties', 'Tobacco stores', 'Gentlemen’s clubs'],
+                                                    prompt: "Brick and Mortar Processing Type", selected: 'Please Select', label: "Brick and Mortar Business Type" %>
 
-        <%= f.button :submit, "Booya! Onto step 3", class: 'btn btn-primary' %>
+
+
+
+        <%= f.input :ecomm_business_type, collection: ['Please Select', 'BizOps', 'Computer Repair Stores', 'Advanced Ticket Sales',
+                                                        'Collection Agencies', 'Coaching / Mentoring services', 'Internet Gun Sales', 'ISP’s and Web hosting companies',
+                                                        'Nutraceuticals', 'Pawn Shops', 'Adult Novelties', 'Tobacco stores', 'Weight loss centers',
+                                                        'CBD oil companies', 'Negative renewal', 'Car rentals', 'Executive air travel clubs','Online Gaming'],
+                                                        prompt: "ECOMM Processing Type", selected: 'Please Select', label: "ECOMM Business Type" %>
+
+          <%= f.button :submit, "Booya! Onto step 3", class: 'btn btn-primary' %>
+        </div>
       <% end %>
     </div>
   </div>
