@@ -6,7 +6,7 @@ class QuotesController < ApplicationController
   def create
     @quote = Quote.new(quote_params)
     if @quote.save
-      redirect_to quote_build_path(@quote)
+      redirect_to new_quote_build_path(@quote)
     else
       render :new
     end

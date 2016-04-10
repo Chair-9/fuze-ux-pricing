@@ -1,0 +1,21 @@
+<div class="container">
+  <br />
+  <div class="col-md-8 col-sm-offset-2">
+    <div class="well">
+      <h1>Processing Info</h1>
+      <%= simple_form_for @quote, url: wizard_path, method: :put do |f| %>
+        <%= f.input :business_name %>
+        <%= f.input :state %>
+
+        <%= f.input :payment_methods %>
+        <%= f.input :annual_average_processing_volume %>
+        <%= f.input :average_sale_amount %>
+        <%= f.input :last_month_processing_volume %>
+        <%= f.input :last_month_processing_fees %>
+        <%= f.input :chargebacks %>
+
+        <%= f.button :submit, "Booya! Onto step 3", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
