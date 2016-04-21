@@ -2,10 +2,11 @@
   <br />
   <div class="col-md-8 col-sm-offset-2">
     <div class="well">
-      <h1>Processing Info</h1>
+      <h1>Processing Information</h1>
       <%= simple_form_for @quote, url: wizard_path, method: :put do |f| %>
         <%= f.input :business_name %>
         <%= f.input :state %>
+
 
         <%= f.input :bm_business_type, collection: ['Please Select', 'Food & Beverage', 'Retail', 'Beauty Professional',
                                                     'Profesional Services', 'Home & Repair Services', 'Health & Fitness', 'Organizations',
